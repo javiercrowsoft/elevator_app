@@ -36,7 +36,7 @@
       <file leaf-file-name="elevator_test.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/models/elevator_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="16" selection-start="826" selection-end="826" vertical-scroll-proportion="0.68869936">
+            <state line="35" column="2" selection-start="724" selection-end="724" vertical-scroll-proportion="0.7089552">
               <folding />
             </state>
           </provider>
@@ -534,7 +534,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/models/elevator_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="826" selection-end="826" vertical-scroll-proportion="0.68869936">
+        <state line="35" column="2" selection-start="724" selection-end="724" vertical-scroll-proportion="0.7089552">
           <folding />
         </state>
       </provider>
