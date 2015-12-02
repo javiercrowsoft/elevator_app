@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201231402) do
+ActiveRecord::Schema.define(version: 20151202093913) do
 
   create_table "elevator_requested_floors", force: :cascade do |t|
     t.integer  "floor"
@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(version: 20151201231402) do
   add_index "elevator_requested_floors", ["elevator_id"], name: "index_elevator_requested_floors_on_elevator_id"
 
   create_table "elevators", force: :cascade do |t|
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "current_floor"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "current_floor", default: 0
+    t.string   "direction",     default: "UP"
   end
 
 end
