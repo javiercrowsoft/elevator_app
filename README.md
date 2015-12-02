@@ -1,14 +1,13 @@
-== README
-
-Elevator APP
+# Elevator APP
 
 This is a simple implementation of an elevator.
 
 after cloning the repo just to go terminal and:
 > rails db:setup
+
 > rails server
 
-open your browser and go to http://localhost:3000/
+open your browser and go to [localhost](http://localhost:3000/)
 
 Instructions
 
