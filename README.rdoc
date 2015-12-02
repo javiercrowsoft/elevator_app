@@ -18,6 +18,6 @@ Press the button "Move if Needed" to make the elevator work. It will move if nee
 Select one or more floors to go (again)
 Keep pressing the button to continue moving the elevator. It is a manual elevator :P
 
-![Alt text](https://raw.githubusercontent.com/javiercrowsoft/elevator_app/master/doc/elevator.png "Optional title")
+![Simulation Form](/doc/elevator.png?raw=true)
 
 <tt>rake doc:app</tt>.
