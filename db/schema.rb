@@ -11,11 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201195816) do
+ActiveRecord::Schema.define(version: 20151201231402) do
+
+  create_table "elevator_requested_floors", force: :cascade do |t|
+    t.integer  "floor"
+    t.integer  "elevator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "elevator_requested_floors", ["elevator_id"], name: "index_elevator_requested_floors_on_elevator_id"
 
   create_table "elevators", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "current_floor"
   end
 
 end
