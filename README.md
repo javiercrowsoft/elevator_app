@@ -4,7 +4,7 @@ This is a simple implementation of an elevator.
 
 after cloning the repo just go to terminal and:
 
-> rails db:setup
+> rake db:setup
 
 > rails server
 
