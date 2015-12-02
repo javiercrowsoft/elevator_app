@@ -2,7 +2,8 @@
 
 This is a simple implementation of an elevator.
 
-after cloning the repo just to go terminal and:
+after cloning the repo just go to terminal and:
+
 > rails db:setup
 
 > rails server
