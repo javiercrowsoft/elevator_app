@@ -4,6 +4,8 @@ This is a simple implementation of an elevator.
 
 after cloning the repo just go to terminal and:
 
+> rake test RAILS_ENV=test
+
 > rake db:setup
 
 > rails server
