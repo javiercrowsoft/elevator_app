@@ -19,5 +19,6 @@ Select one or more floors to go (again)
 Keep pressing the button to continue moving the elevator. It is a manual elevator :P
 
 ![Simulation Form](/doc/elevator.png?raw=true)
+![elevator](https://cloud.githubusercontent.com/assets/1075455/11537863/ed55f1f2-98fd-11e5-9e24-402b0b6104e0.png)
 
 <tt>rake doc:app</tt>.
