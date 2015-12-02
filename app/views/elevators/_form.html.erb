@@ -1,0 +1,24 @@
+<%= form_for @elevator, :html => { :class => 'form-horizontal' } do |f| %>
+  <h1>Elevator <%= @elevator.id %></h1>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="control-group">
+        <%= f.label :floors, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.number_field :floors, :class => 'number_field' %>
+          <p>* It uses the American convention: 5 floors are 0 to 4 ( 0 is ground )</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-actions">
+        <%= f.submit nil, :class => 'btn btn-primary' %>
+        <%= link_to t('.cancel', :default => t("helpers.links.cancel")), elevators_path, :class => 'btn' %>
+      </div>
+    </div>
+  </div>
+<% end %>

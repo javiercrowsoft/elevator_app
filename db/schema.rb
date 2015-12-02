@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202093913) do
+ActiveRecord::Schema.define(version: 20151202104557) do
 
   create_table "elevator_requested_floors", force: :cascade do |t|
     t.integer  "floor"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151202093913) do
     t.datetime "updated_at",                   null: false
     t.integer  "current_floor", default: 0
     t.string   "direction",     default: "UP"
+    t.integer  "floors"
   end
 
 end

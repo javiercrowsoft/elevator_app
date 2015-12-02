@@ -14,6 +14,17 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  resources :elevators do
+    member do
+      get 'request_up'
+      get 'request_down'
+      get 'go_to_floor'
+      get 'work'
+    end
+  end
+
+  root :to => 'elevators#show_default_elevator'
+
   # Example resource route with options:
   #   resources :products do
   #     member do

@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+elevator = Elevator.find_by_floors(7)
+if elevator.blank?
+  Elevator.create(floors: 7)
+end
