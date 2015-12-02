@@ -1,28 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Elevator APP
 
-Things you may want to cover:
+This is a simple implementation of an elevator.
 
-* Ruby version
+after cloning the repo just to go terminal and:
+> rails db:setup
+> rails server
 
-* System dependencies
+open your browser and go to http://localhost:3000/
 
-* Configuration
+Instructions
 
-* Database creation
+You can call the elevator from any floor using the buttons UP or DOWN
+Select one or more floors to go using the elevator key pad.
+Press the button "Move if Needed" to make the elevator work. It will move if needed up or down ONLY one floor.
+Select one or more floors to go (again)
+Keep pressing the button to continue moving the elevator. It is a manual elevator :P
 
-* Database initialization
+![Alt text](https://raw.githubusercontent.com/javiercrowsoft/elevator_app/master/doc/elevator.png "Optional title")
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
