@@ -90,8 +90,7 @@ class ElevatorsController < ApplicationController
 
   def show_default_elevator
     elevator = Elevator.first
-    if elevator.blank?
-    else
+    if elevator.present?
       redirect_to action: "show", id: elevator.id
     end
   end

@@ -11,7 +11,7 @@
   </tr>
   </thead>
   <tbody>
-  <% @elevators.each do |elevator| %>
+  <% @elevator.each do |elevator| %>
     <tr>
       <td><%= link_to elevator.id, elevator_path(elevator) %></td>
       <td><%= elevator.floors %></td>

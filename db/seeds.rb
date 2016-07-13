@@ -8,5 +8,5 @@
 
 elevator = Elevator.find_by_floors(7)
 if elevator.blank?
-  Elevator.create(floors: 7)
+  Elevator.create(number:1, floors: 7)
 end

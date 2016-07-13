@@ -3,7 +3,7 @@ require 'test_helper'
 class ElevatorTest < ActiveSupport::TestCase
 
   test "should change direction" do
-    elevator = Elevator.create(floors: 7) # from 0 to 6
+    elevator = Elevator.create(number:1, floors: 7) # from 0 to 6
     assert_equal Elevator::UP, elevator.direction, "A just created elevator should have direction eq UP"
     elevator.go_to_floor 4 # someone gets into the elevator and wants to go to floor 4
     elevator.close_door
@@ -38,7 +38,7 @@ class ElevatorTest < ActiveSupport::TestCase
   end
 
   test "should accept a floor number" do
-    elevator = Elevator.create(floors: 7) # from 0 to 6
+    elevator = Elevator.create(number:1, floors: 7) # from 0 to 6
     elevator.arrive_at_floor 4
     elevator.request_down 1
     elevator.go_to_floor 0
@@ -50,13 +50,13 @@ class ElevatorTest < ActiveSupport::TestCase
   end
 
   test "should move to that floor" do
-    elevator = Elevator.create(floors: 7) # from 0 to 6
+    elevator = Elevator.create(number:1, floors: 7) # from 0 to 6
     elevator.arrive_at_floor 4
     assert_equal 4, elevator.current_floor
   end
 
   test "should mantain a list of floor numbers" do
-    elevator = Elevator.create(floors: 7) # from 0 to 6
+    elevator = Elevator.create(number:1, floors: 7) # from 0 to 6
     elevator.arrive_at_floor 4
     elevator.request_down 1
     elevator.arrive_at_floor 1
@@ -71,7 +71,7 @@ class ElevatorTest < ActiveSupport::TestCase
   end
 
   test "should move through the floors" do
-    elevator = Elevator.create(floors: 7) # from 0 to 6
+    elevator = Elevator.create(number:1, floors: 7) # from 0 to 6
     elevator.arrive_at_floor 4
     elevator.request_down 1
     elevator.arrive_at_floor 1
@@ -88,7 +88,7 @@ class ElevatorTest < ActiveSupport::TestCase
   end
 
   test "should reverse direction when it reaches the top" do
-    elevator = Elevator.create(floors: 7) # from 0 to 6
+    elevator = Elevator.create(number:1, floors: 7) # from 0 to 6
     elevator.go_to_floor 3
     elevator.go_to_floor 6
     elevator.close_door

@@ -23,7 +23,17 @@ Rails.application.routes.draw do
     end
   end
 
-  root :to => 'elevators#show_default_elevator'
+  resources :elevator_controllers do
+    member do
+      get 'request_up'
+      get 'request_down'
+      get 'elevator_go_to_floor'
+      get 'work'
+    end
+  end
+
+  #root :to => 'elevators#show_default_elevator'
+  root :to => 'elevator_controllers#show_default_elevator_controller'
 
   # Example resource route with options:
   #   resources :products do
