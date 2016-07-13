@@ -96,38 +96,40 @@
             <%(0..@elevator_controller.sorted_elevators.count-1).step(2) do |t| %>
                 <div class="row" style="margin-bottom: 20px;">
                 <%2.times do |k| %>
-                    <div class="col-md-6">
-                    <p>Elevator: <%= t+k+1 %></p>
-                    <table>
-                      <%
-                         (0..@elevator_controller.floors-1).step(3) do |i|
-                      %>
-                          <tr style='height: 50px'>
-                            <td style='background-color: #eee; min-width: 60px; text-align: center'>
-                              <%= link_to i,
-                                          elevator_go_to_floor_elevator_controller_path(floor: i, elevator: t+k), :class => 'btn btn-info'  %>
-                            </td>
-                            <% if i + 1 < @elevator_controller.floors %>
+                    <% if k < @elevator_controller.sorted_elevators.count %>
+                        <div class="col-md-6">
+                        <p>Elevator: <%= t+k+1 %></p>
+                        <table>
+                          <%
+                             (0..@elevator_controller.floors-1).step(3) do |i|
+                          %>
+                              <tr style='height: 50px'>
                                 <td style='background-color: #eee; min-width: 60px; text-align: center'>
-                                  <%= link_to i+1,
-                                              elevator_go_to_floor_elevator_controller_path(floor: i+1, elevator: t+k), :class => 'btn btn-info'  %>
+                                  <%= link_to i,
+                                              elevator_go_to_floor_elevator_controller_path(floor: i, elevator: t+k), :class => 'btn btn-info'  %>
                                 </td>
-                                <% if i + 2 < @elevator_controller.floors %>
+                                <% if i + 1 < @elevator_controller.floors %>
                                     <td style='background-color: #eee; min-width: 60px; text-align: center'>
-                                      <%= link_to i+2,
-                                                  elevator_go_to_floor_elevator_controller_path(floor: i+2, elevator: t+k), :class => 'btn btn-info'  %>
+                                      <%= link_to i+1,
+                                                  elevator_go_to_floor_elevator_controller_path(floor: i+1, elevator: t+k), :class => 'btn btn-info'  %>
                                     </td>
+                                    <% if i + 2 < @elevator_controller.floors %>
+                                        <td style='background-color: #eee; min-width: 60px; text-align: center'>
+                                          <%= link_to i+2,
+                                                      elevator_go_to_floor_elevator_controller_path(floor: i+2, elevator: t+k), :class => 'btn btn-info'  %>
+                                        </td>
+                                    <% else %>
+                                        <td style='background-color: #eee; min-width: 60px'></td>
+                                    <% end %>
                                 <% else %>
                                     <td style='background-color: #eee; min-width: 60px'></td>
+                                    <td style='background-color: #eee; min-width: 60px'></td>
                                 <% end %>
-                            <% else %>
-                                <td style='background-color: #eee; min-width: 60px'></td>
-                                <td style='background-color: #eee; min-width: 60px'></td>
-                            <% end %>
-                          </tr>
-                      <% end %>
-                    </table>
-                    </div>
+                              </tr>
+                          <% end %>
+                        </table>
+                        </div>
+                    <% end %>
                 <% end %>
                 </div>
             <% end %>
